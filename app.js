@@ -4,7 +4,6 @@ const ApiService = require('moleculer-web')
 const cookieParser = require('cookie-parser')
 
 const handle = require('./app/handlers')
-const { authMiddleware } = require('./app/middleware')
 
 const broker = new ServiceBroker({
     logger: console
