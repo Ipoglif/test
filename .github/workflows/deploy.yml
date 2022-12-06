@@ -27,5 +27,5 @@ jobs:
          docker build . --tag ghcr.io/deselikem/hello-docker-gcr-demo:latest
          docker push ghcr.io/deselikem/hello-docker-gcr-demo:latest
      # Deploy
-      - run: cd dist && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" docker run app
+      - run: cd dist && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" docker build . -t app
       #- run: cd dist && rsync -e "ssh -i $HOME/.ssh/key -o"
