@@ -42,4 +42,4 @@ broker.createService({
 })
 
 broker.start()
-    .then(()=>console.log('Service Starszz'))
+    .then(()=>console.log('Service Starszqqwz'))
