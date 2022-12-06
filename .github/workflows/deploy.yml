@@ -22,4 +22,4 @@ jobs:
       - run: mkdir "$HOME/.ssh"
       - run: echo "{{ secrets.key }}" > "$HOME/.ssh/key"
       - run: chmod 600 "$HOME/.ssh/key"
-      - run: cd dist && rsync -e "ssh -i $HOME/.ssh/key -o"
+      #- run: cd dist && rsync -e "ssh -i $HOME/.ssh/key -o"
