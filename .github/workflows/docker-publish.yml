@@ -1,16 +1,16 @@
 name: Docekr
 
-on:
-  push:
-    branches:
-      - master
+on: push
+
 jobs:
   run-tests:
-    name: Run test
+    name: Run fTests
     runs-on: ubuntu-latest
     container:
       image: app:latest
       volumes:
-        - ${{ github.workspace }}:/test
-  steps:
-    uses: actions/checkout@v2
+        - my-app:/app
+      
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
