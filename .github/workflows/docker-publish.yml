@@ -9,7 +9,7 @@ jobs:
     container:
       image: app:latest
       volumes:
-        - my-app:/app
+        - ${{ github.workspace }}:/app
       
     steps:
       - name: Check out the repo
