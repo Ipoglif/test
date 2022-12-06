@@ -11,6 +11,6 @@ jobs:
     container:
       image: app:latest
       volumes:
-        - ${{ github.workspace }}:/app
+        - ${{ github.workspace }}:/test
   steps:
     uses: actions/checkout@v2
