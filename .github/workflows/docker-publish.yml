@@ -7,7 +7,7 @@ jobs:
     name: Run fTests
     runs-on: ubuntu-latest
     container:
-      image: app:latest
+      image: conposer:latest
       volumes:
         - ${{ github.workspace }}:/app
       
