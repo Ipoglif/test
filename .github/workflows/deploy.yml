@@ -23,6 +23,7 @@ jobs:
       - run: echo "{{ secrets.key }}" > "$HOME/.ssh/key"
       - run: chmod 600 "$HOME/.ssh/key"
       # Build
-      - run: npm ci
-      - run: npm run build
+      - run: |
+         docker build . --tag ghcr.io/deselikem/hello-docker-gcr-demo:latest
+         docker push ghcr.io/deselikem/hello-docker-gcr-demo:latest
       #- run: cd dist && rsync -e "ssh -i $HOME/.ssh/key -o"
