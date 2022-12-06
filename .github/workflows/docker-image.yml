@@ -22,5 +22,12 @@ jobs:
         run: |
          docker build . --tag ghcr.io/deselikem/hello-docker-gcr-demo:latest
          docker push ghcr.io/deselikem/hello-docker-gcr-demo:latest
+      - name: testDeploy
+      - run: set -eu
+      - run: mkdir "$HOME/.ssh"
+      - run: echo "{{ secrets.key }}" > "$HOME/.ssh/key"
+      - run: chmod 600 "$HOME/.ssh/hey"
+        
+        
    
 
